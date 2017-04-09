@@ -833,41 +833,6 @@ Painter = function (div, options) {
 
     /*----- METHODS -----*/
 
-    this.saveImage = function () {
-
-        debugger
-        var _do = function (data) {
-            $.post(settings.save_url, {
-                    data: data
-                },
-                /**
-                 * @param {{res: Object, msg: ?string, image: ?string}} json
-                 */
-                function (json) {
-                    if (typeof(json.res) === 'undefined' || json.res != 'ok') {
-                        alert(json.msg ? json.msg : 'Ошибка!')
-                    } else {
-                        self.current_image = json.image;
-                        // fixme - доработать
-                        alert('Картинка сохраненна!');
-                    }
-                }, 'json');
-        };
-
-        self.contextBuffer2.save();
-        self.contextBuffer2.clearRect(0, 0, settings.width, settings.height);
-        self.contextBuffer2.fillStyle = color_rgb(curr_color_bg_r, curr_color_bg_g, curr_color_bg_b);
-        self.contextBuffer2.fillRect(0, 0, settings.width, settings.height);
-
-        self.contextBuffer2.drawImage(self.canvas, 0, 0);
-        self.contextBuffer2.restore();
-
-        var data = self.canvasBuffer2.toDataURL('image/jpeg');
-        _do(data);
-
-        self.contextBuffer2.clearRect(0, 0, settings.width, settings.height);
-    };
-
     var getCanvasData = function() {
         self.contextBuffer2.save();
         self.contextBuffer2.clearRect(0, 0, settings.width, settings.height);
