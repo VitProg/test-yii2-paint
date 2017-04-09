@@ -1,0 +1,23 @@
+
+
+.painter-editor.panel {
+    background-color: #DDD;
+    width: 834px;
+    margin: 0 auto;
+}
+
+.painter-editor .controls {
+    margin-bottom: 10px;
+}
+
+.painter-editor .controls .p_setting {
+    float: left;
+    width: 180px;
+}
+
+.painter-editor .controls > * {
+}
+
+.painter-editor .cont_canvas {
+    border: 1px solid #999;
+}
