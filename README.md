@@ -3,6 +3,7 @@ test yii2 paint
 
 Простенькая рисовалка с возможностью сохранения и редактирования (по паролю) рисунков и просмотра списка всех рисонков.
 
+DEMO - [http://yii2_paint_test.jquarter.ru/](http://yii2_paint_test.jquarter.ru/)
 
 
 REQUIREMENTS
@@ -32,6 +33,12 @@ cd test-yii2-paint
 composer install
 ~~~
 
+~~~
+chmod 777 ./runtime/ -R
+chmod 777 ./web/assets/ -R
+chmod 755 yii
+~~~
+
 Настраиваем подключение к БД:
 
 ~~~
@@ -45,7 +52,7 @@ nano ./config/db.local.php
 Запускаем миграции:
 
 ~~~
-yii migrate/up
+./yii migrate/up
 ~~~
 
 Все готово!
