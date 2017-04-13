@@ -36,7 +36,7 @@ class Image extends ActiveRecord
                 'class' => TimestampBehavior::class,
                 'createdAtAttribute' => 'created_at',
                 'updatedAtAttribute' => 'updated_at',
-                'value' => new Expression('now()'),
+//                'value' => new Expression('now()'),
             ],
             [
                 'class' => AttributeBehavior::class,
