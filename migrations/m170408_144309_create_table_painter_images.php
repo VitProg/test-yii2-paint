@@ -7,7 +7,7 @@ class m170408_144309_create_table_painter_images extends Migration
     public function up()
     {
         $this->createTable('{{painter_images}}', [
-            'id' => $this->primaryKey()->unsigned()->notNull(),
+            'id' => $this->primaryKey(),
             'title' => $this->string(64)->notNull(),
             'file' => $this->string(64)->notNull(),
             'pass' => $this->string(64)->notNull(),
